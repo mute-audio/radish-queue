@@ -17,21 +17,22 @@
 
 RaspberryPiでの使用を前提にしています。
 
-[mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストールしてください。
-準備ができたらSSHでアクセスし、[radish-queue.sh](https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh)をダウンロードして実行権限を設定します。
+[mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストール、sshでアクセスしてください。
+
+まず、xmllintが必要なので、libxml2-utilsをインストールします。
+
+```
+$ sudo apt install libxml2-utils
+```
+つぎに、[radish-queue.sh](https://github.com/mute-audio/radish-queue/blob/master/radish-queue.sh)をダウンロードし、
+権限を変更して実行可能にします。
 
 ```
 $ wget https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh
 $ sudo chmod 755 radish-queue.sh
 ```
 
-xmllintが必要なので、libxml2-utilsをインストールします。
-
-```
-$ sudo apt install libxml2-utils
-```
-
-ダウンロードできたら、シェルスクリプトを実行します。
+実行形式は以下の通り；
 ```
 $ ./radish-queue.sh [options]
 ```
@@ -44,11 +45,7 @@ $ ./radish-queue.sh [options]
 |-p _PASSWORD_||ラジコプレミアム ログインパスワード|環境変数 `RADIKO_PASSWORD` でも指定可能|
 |-l||放送局ID/名称表示|結果は300行以上になります、また取得は(割と)重いです|
 
-このスクリプトはキューを登録するだけで再生はしません。実行後にMPDクライアントやMPDリモートアプリから再生してください。
-
-Radikoサービスの場合は一定時間経過するとURLが無効になりますので、radish-queue実行後すぐに再生操作を行なってください。
-
-## 実行例
+### 実行例
 ```
 NHK らじる★らじる
 $ ./radi.sh -t nhk -s tokyo-fm
@@ -80,6 +77,8 @@ $ ./radi.sh -t lisradi -s 30058
 渋谷のラジオ
 $ ./radi.sh -t shiburadi
 ```
+このスクリプトはキューを登録するだけで再生はしません。実行後にMPDクライアントやMPDリモートアプリからキューに登録されていることを確認して、再生してください。
+また、Radikoサービスの場合は一定時間経過するとURLが無効になりますので、radish-queue実行後すぐに再生操作してください。
 
 Enjoy!
 
