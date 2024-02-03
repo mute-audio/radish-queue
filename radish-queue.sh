@@ -1,8 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+
+
+# MPD queue generator of JP-Radio streaming
+# 2024(C) kitamura_design(mute-audio)
+#
+# this program is fork from:
 #
 # Japan internet radio live streaming recoder
 # Copyright (C) 2019 uru (https://twitter.com/uru_2)
 # License is MIT (see LICENSE file)
+
 set -u
 
 #######################################
