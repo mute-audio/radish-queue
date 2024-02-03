@@ -17,8 +17,11 @@
 
 RaspberryPiでの使用を前提にしています。
 
-[mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストール、sshでアクセスしてください。
+[muteなどで、RaspberryPiにMPDとmpcをインストール](https://github.com/mute-audio/mute)後、sshでアクセスしてください。
 
+```
+$ ssh [user]@[hostname].local
+```
 まず、xmllintが必要なので、libxml2-utilsをインストールします。
 
 ```
