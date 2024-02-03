@@ -18,7 +18,7 @@
 RaspberryPiでの使用を前提にしています。
 
 [mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストールしてください。
-準備ができたらSSHでアクセスし、radish-queue.shをダウンロードします。
+準備ができたらSSHでアクセスし、[radish-queue.sh](https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh)をダウンロードします。
 
 ```
 $ wget https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh
@@ -30,7 +30,7 @@ xmllintが必要なので、libxml2-utilsをインストールします。
 $ sudo apt install libxml2-utils
 ```
 
-ダウンロードできたら、次のようにコマンドを実行します。
+ダウンロードできたら、シェルスクリプトを実行します。
 ```
 $ ./radish-queue.sh [options]
 ```
@@ -43,9 +43,9 @@ $ ./radish-queue.sh [options]
 |-p _PASSWORD_||ラジコプレミアム ログインパスワード|環境変数 `RADIKO_PASSWORD` でも指定可能|
 |-l||放送局ID/名称表示|結果は300行以上になります、また取得は(割と)重いです|
 
-このスクリプトはキューを登録するだけです。実行後、ラジオストリーミングのURLがMPDのQueueに登録されますので、MPDクライアントやMPDリモートアプリから再生してください。
+このスクリプトはキューを登録するだけで再生はしません。実行後にMPDクライアントやMPDリモートアプリから再生してください。
 
-特にRadikoは一定時間経過するとURLが無効になりますので、radish-queue実行後すぐに再生操作を行なってください。
+Radikoサービスの場合は一定時間経過するとURLが無効になりますので、radish-queue実行後すぐに再生操作を行なってください。
 
 ## 実行例
 ```
