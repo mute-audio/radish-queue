@@ -10,7 +10,7 @@
 - curl
 - libxml2 (xmllintのみ使用)
 - jq
-- MPD
+- MPD & mpc
 
 
 ## 使い方
