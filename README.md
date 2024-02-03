@@ -18,10 +18,11 @@
 RaspberryPiでの使用を前提にしています。
 
 [mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストールしてください。
-準備ができたらSSHでアクセスし、[radish-queue.sh](https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh)をダウンロードします。
+準備ができたらSSHでアクセスし、[radish-queue.sh](https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh)をダウンロードして実行権限を設定します。
 
 ```
 $ wget https://raw.githubusercontent.com/mute-audio/radish-queue/master/radish-queue.sh
+$ sudo chmod 755 radish-queue.sh
 ```
 
 xmllintが必要なので、libxml2-utilsをインストールします。
