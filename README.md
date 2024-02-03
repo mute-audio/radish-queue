@@ -1,12 +1,11 @@
 # radish
-[NHKラジオ らじる★らじる](https://www.nhk.or.jp/radio/) / [radiko](http://radiko.jp/) / [ListenRadio](http://listenradio.jp/) / [渋谷のラジオ](https://shiburadi.com/) で現在配信中の番組を保存するシェルスクリプトを改造し、単純に再生するようにしたものです。
+[NHKラジオ らじる★らじる](https://www.nhk.or.jp/radio/) / [radiko](http://radiko.jp/) / [ListenRadio](http://listenradio.jp/) / [渋谷のラジオ](https://shiburadi.com/) で現在配信中の番組を保存するシェルスクリプトを改造した再生専用スクリプトを、さらにMPDのQueueに登録するように改造したシェルスクリプトです。
 
 
 ## 必要なもの
 - curl
 - libxml2 (xmllintのみ使用)
 - jq
-- FFmpeg (3.x以降 要AAC,HLSサポート)
 
 
 ## 使い方
