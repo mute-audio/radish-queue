@@ -1,4 +1,8 @@
 # radish
+![Static Badge](https://img.shields.io/badge/-RaspberryPi-A22846?logo=raspberrypi&logoColor=white)
+ ![Static Badge](https://img.shields.io/badge/-Raspi_Audio-red) ![Static Badge](https://img.shields.io/badge/-MPD-brightgreen)
+ ![Static Badge](https://img.shields.io/badge/GNU_Bash-4EAA25?logo=gnubash&logoColor=white) ![Static Badge](https://img.shields.io/badge/license-MIT-blue) 
+
 [NHKラジオ らじる★らじる](https://www.nhk.or.jp/radio/) / [radiko](http://radiko.jp/) / [ListenRadio](http://listenradio.jp/) / [渋谷のラジオ](https://shiburadi.com/) で現在配信中の番組を保存するシェルスクリプト[radi.sh](https://github.com/uru2/radish)を改造した再生専用スクリプト[radish-play](https://github.com/jg1uaa/radish-play)を、さらにMPDのQueue登録専用に改造したシェルスクリプトです。
 
 
