@@ -2,9 +2,9 @@
 
 # MPD queue generator of JP-Radio streaming
 # 2024(C) kitamura_design(mute-audio)
-#
-# this program is fork from:
-#
+
+# This program is fork from:
+
 # Japan internet radio live streaming recoder
 # Copyright (C) 2019 uru (https://twitter.com/uru_2)
 # License is MIT (see LICENSE file)
@@ -247,23 +247,6 @@ get_hls_uri_lisradi() {
 get_hls_uri_shiburadi() {
   curl --silent "https://shibuyanoradio.info/infoapi/?ver=1.1" | jq -r ".basicinfo.hls_playback" 2> /dev/null
 }
-
-#######################################
-# Format time text
-# Arguments:
-#   Time minute
-# Returns:
-#   None
-#######################################
-format_time() {
-  minute=$1
-
-  hour=$((minute / 60))
-  minute=$((minute % 60))
-
-  printf "%02d:%02d:%02d" "${hour}" "${minute}" "0"
-}
-
 
 ##### Main routine start #####
 
