@@ -28,8 +28,6 @@ Options:
                     lisradi: ListenRadio
                     shiburadi: Shibuya no Radio
   -s STATION ID   Station ID
-  -d MINUTE       Record minute(s)
-  -o FILEPATH     Output file path
   -i ADDRESS      login mail address (radiko only)
   -p PASSWORD     login password (radiko only)
   -l              Show all station ID list
