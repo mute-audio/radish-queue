@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # MPD queue generator of JP-Radio streaming
 # 2024(C) kitamura_design(mute-audio)
 #
@@ -420,21 +419,16 @@ if [ -z "${playlist_uri}" ]; then
   exit 1
 fi
 
-# Play
+# Queue to MPD
 if [ "${type}" = "radiko" ]; then
-  ffplay \
-      -loglevel error \
-      -fflags +discardcorrupt \
-      -headers "X-Radiko-Authtoken: ${radiko_authtoken}" \
-      -i "${playlist_uri}" \
-      -nodisp
+  curl --silent -H "X-Radiko-Authtoken: ${radiko_authtoken}" "${playlist_uri}" \
+| sed -e '/#/d' \
+| mpc add
 else
-  ffplay \
-      -loglevel error \
-      -fflags +discardcorrupt \
-      -i "${playlist_uri}" \
-      -nodisp
+  echo "${playlist_uri}" \
+| mpc add
 fi
+
 ret=$?
 if [ ${ret} -ne 0 ]; then
   echo "Record failed" >&2
