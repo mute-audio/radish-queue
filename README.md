@@ -15,7 +15,7 @@
 
 ## 使い方
 
-RaspberryPiでの使用を前提にしています。
+＊RaspberryPiでの使用を前提にしています。
 
 [muteなどで、RaspberryPiにMPDとmpcをインストール](https://github.com/mute-audio/mute)後、sshでアクセスしてください。
 
