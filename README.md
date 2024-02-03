@@ -14,8 +14,13 @@
 
 
 ## 使い方
+
+RaspberryPiでの使用を前提にしています。
+[mute](https://github.com/mute-audio/mute)などで、RaspberryPiにMPDとmpcをインストールしてください。
+準備ができたらSSHでアクセスし、radish-queueをダウンロードします。
+
 ```
-$ ./radi.sh [options]
+$ ./radish-queue [options]
 ```
 
 | 引数 | 必須 |説明 |備考 |
