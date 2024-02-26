@@ -417,5 +417,7 @@ if [ ${ret} -ne 0 ]; then
 fi
 
 # Finish
+echo "Add \"${station_id}\" to MPD Queue..."
 exit 0
+
 ##### Main routine end #####
