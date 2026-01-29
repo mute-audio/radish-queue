@@ -51,34 +51,34 @@ $ ./radish-queue.sh [options]
 ### 実行例
 ```
 NHK らじる★らじる
-$ ./radi.sh -t nhk -s tokyo-fm
+$ ./radish-queue.sh -t nhk -s tokyo-fm
 ```
 
 ```
 radikoエリア内の局
-$ ./radi.sh -t radiko -s INT
+$ ./radish-queue.sh -t radiko -s INT
 ```
 
 ```
 radikoエリア外の局 (ラジコプレミアム)
-$ ./radi.sh -t radiko -s FMT -i "foo@example.com" -p "password"
+$ ./radish-queue.sh -t radiko -s FMT -i "foo@example.com" -p "password"
 ```
 
 ```
 radikoエリア外の局 (ラジコプレミアム 環境変数からログイン情報設定)
 $ export RADIKO_MAIL="foo@example.com"
 $ export RADIKO_PASSWORD="password"
-$ ./radi.sh -t radiko -s FMJ
+$ ./radish-queue.sh -t radiko -s FMJ
 ```
 
 ```
 ListenRadio
-$ ./radi.sh -t lisradi -s 30058
+$ ./radish-queue.sh -t lisradi -s 30058
 ```
 
 ```
 渋谷のラジオ
-$ ./radi.sh -t shiburadi
+$ ./radish-queue.sh -t shiburadi
 ```
 このスクリプトはキューを登録するだけで再生はしません。実行後にMPDクライアントやMPDリモートアプリからキューに登録されていることを確認し再生してください。
 また、Radikoサービスの場合、radish-queue実行後一定時間経過するとURLが無効になります。
